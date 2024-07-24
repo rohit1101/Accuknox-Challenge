@@ -6,9 +6,39 @@
 
 **Objective:** To containerize and deploy the Wisecow application, hosted in the above-mentioned GitHub repository, on a Kubernetes environment with secure TLS communication. 
 
+**Prerequisites:**
+
+Execute the following commands in order to solve Problem Statement 1
+
+```sh
+git clone https://github.com/nyrahul/wisecow.git
+sudo apt install fortune-mod cowsay -y
+./wisecow.sh
+```
+Now open your preferred browser and enter this URL: `http://localhost:4499` to get wisecow wisdom
+
 **Requirements:** 
 - Dockerization:
-  - Develop a Dockerfile for creating a container image of the Wisecow application. 
+  - Develop a Dockerfile for creating a container image of the Wisecow application.
+  ```Dockerfile
+  # use ubuntu as base image
+  FROM ubuntu:22.04
+
+  # update, upgrade and install the necessary dependancies
+  RUN apt update -y && apt upgrade -y && apt install fortune-mod netcat cowsay -y 
+  
+  # Set cowsay-app/ as working directory
+  WORKDIR /cowsay-app
+
+  # Copy all files from current directory from host machine to WORKDIR
+  COPY . .
+
+  # Expose a desired port for the container to be run
+  EXPOSE  4499
+
+  # Execute the following command once the container starts
+  ENTRYPOINT ["sh","-c","export PATH=$PATH:/usr/games && ./wisecow.sh"]
+  ``` 
 - Kubernetes Deployment: 
   - Craft Kubernetes manifest files for deploying the Wisecow application in a Kubernetes environment. 
   - The Wisecow app must be exposed as a Kubernetes service for accessibility. 
@@ -46,7 +76,7 @@ Write a script to automate the backup of a specified directory to a remote serve
 Create a script that analyzes web server logs (e.g., Apache, Nginx) for common patterns such as the number of 404 errors, the most requested pages, or IP addresses with the most requests. The script should output a summarized report.
 
 
-4. **Application Health Checker: **
+4. **Application Health Checker:**
 Please write a script that can check the uptime of an application and determine if it is functioning correctly or not. The script must accurately assess the application's status by checking HTTP status codes. It should be able to detect if the application is 'up', meaning it is functioning correctly, or 'down', indicating that it is unavailable or not responding.
 
 ---
