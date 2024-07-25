@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: cowsay-cont
-          image: docker.io/awsclouddev/cowsay-wisdom:v1.0.1
-          imagePullPolicy: IfNotPresent
+          image: docker.io/awsclouddev/cowsay-wisdom:latest
+          imagePullPolicy: Always
           command:
             [
               "sh",
