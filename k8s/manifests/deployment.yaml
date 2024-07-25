@@ -18,6 +18,12 @@ spec:
         - name: cowsay-cont
           image: docker.io/awsclouddev/cowsay-wisdom:v1.0.1
           imagePullPolicy: IfNotPresent
+          command:
+            [
+              "sh",
+              "-c",
+              "chmod +x ./wisecow.sh && export PATH=$PATH:/usr/games && ./wisecow.sh",
+            ]
           ports:
             - containerPort: 4499
 
