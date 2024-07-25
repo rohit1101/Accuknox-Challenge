@@ -38,7 +38,13 @@ Now open your preferred browser and enter this URL: `http://localhost:4499` to g
 
   # Execute the following command once the container starts
   ENTRYPOINT ["sh","-c","export PATH=$PATH:/usr/games && ./wisecow.sh"]
-  ``` 
+  ```
+  - Use the following commands build and push the docker image to DockerHub:
+    ```sh
+    docker build -t <repo-name>/<image-name>:<version> .
+    docker login
+    docker push <repo-name>/<image-name>:<version>
+    ```
 - Kubernetes Deployment: 
   - Craft Kubernetes manifest files for deploying the Wisecow application in a Kubernetes environment. 
   - The Wisecow app must be exposed as a Kubernetes service for accessibility. 
