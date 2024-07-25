@@ -3,8 +3,7 @@ name: Workflow for building docker Image and pushing it to Docker Hub
 on:
   push:
     branches:
-      - main
-      - "!main"
+      - "*"
   pull_request:
     types: [opened]
 
