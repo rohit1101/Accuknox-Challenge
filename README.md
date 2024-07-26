@@ -52,24 +52,7 @@ Now open your preferred browser and enter this URL: `http://localhost:4499` to g
     - For exposing and testing the cowsay app I have used `nodePort` as a service type and port-forwarded the response as shown in the screenshot below:
     <img width="987" alt="image" src="https://github.com/user-attachments/assets/e7c5e173-4f8f-403b-b56e-7738bd1d8281">
     <img width="997" alt="image" src="https://github.com/user-attachments/assets/b4bf2a30-4f11-4e7f-8c96-5adca0c41189">
-    <img width="1440" alt="image" src="https://github.com/user-attachments/assets/e604e412-c30a-4458-9b55-3077948af608">
-- Continuous Integration and Deployment (CI/CD):
-  - Implement a GitHub Actions workflow for:
-  - Automating the build and push of the Docker image to a container registry whenever changes are committed to the repository.
-  - Continuous Deployment [Challenge Goal]: Automatically deploy the updated application to the Kubernetes environment following successful image builds.
-- TLS Implementation [Challenge Goal]:
-  - Ensure that the Wisecow application supports secure TLS communication.
-- Expected Artifacts:
-  - A private GitHub repository containing:
-  - The Wisecow application source code.
-  - The Dockerfile for the application.
-  - Kubernetes manifest files for deployment.
-  - The CI/CD pipeline configuration.
-  - A GitHub Actions workflow file for facilitating Continuous Build and Deployment (CI/CD)
-- Access Control:
-  - The GitHub repository should be set to public.
-  - End Goal: The successful containerisation and deployment of the Wisecow application to the Kubernetes environment with an automated CI/CD pipeline and secured with TLS communication.
-
+    <img width="1440" alt="image" src="https://github.com/user-attachments
 ---
 
 ## Problem Statement 2:
