@@ -52,7 +52,7 @@ Now open your preferred browser and enter this URL: `http://localhost:4499` to g
     - For exposing and testing the cowsay app I have used `nodePort` as a service type and port-forwarded the response as shown in the screenshot below:
     <img width="987" alt="image" src="https://github.com/user-attachments/assets/e7c5e173-4f8f-403b-b56e-7738bd1d8281">
     <img width="997" alt="image" src="https://github.com/user-attachments/assets/b4bf2a30-4f11-4e7f-8c96-5adca0c41189">
-    <img width="1440" alt="image" src="https://github.com/user-attachments
+    <img width="1440" alt="image" src="https://github.com/user-attachments/assets/e604e412-c30a-4458-9b55-3077948af608">
 ---
 
 ## Problem Statement 2:
